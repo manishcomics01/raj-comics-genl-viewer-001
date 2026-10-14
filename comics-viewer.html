@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Comic Viewer</title>
+  <link rel="stylesheet" href="css/viewer-style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a href="index.html" class="home-link">Comic Viewer</a>
+    <label class="comic-picker-label">Comic
+      <select id="comicPicker" aria-label="Choose comic"></select>
+    </label>
+  </header>
+  <main class="reader">
+    <div class="comic-heading">
+      <h1 id="comicTitle">Loading comic…</h1><p id="comicMeta"></p>
+      <a id="backToTop" href="#" class="small-link" style="display:none;">Back to comic list</a>
+    </div>
+    <div id="emptyState" class="empty-state" hidden>No pages are listed for this comic yet. Add the image paths to <code>data/comics.json</code>.</div>
+    <div id="imageFrame" class="image-frame"><img id="pageImage" alt="Comic page" hidden><p id="imageError" hidden>Could not load this page image. Check its path in <code>data/comics.json</code>.</p></div>
+    <div class="controls">
+      <button id="prevButton" type="button">← Previous</button>
+      <span id="pageCounter">Page 0 of 0</span>
+      <button id="nextButton" type="button">Next →</button>
+    </div>
+    <div class="page-jump"><label for="pageInput">Go to page</label><input id="pageInput" type="number" min="1" value="1"><button id="goButton" type="button">Go</button></div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

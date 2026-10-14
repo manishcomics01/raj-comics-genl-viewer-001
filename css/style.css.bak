@@ -1,0 +1,22 @@
+:root { color-scheme:dark; --bg:#101318; --panel:#1b2028; --line:#343b47; --text:#f2f4f7; --muted:#b2bbc8; --accent:#8ab4ff; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--text); font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif; }
+.topbar { min-height:62px; display:flex; justify-content:space-between; align-items:center; gap:16px; padding:10px 20px; background:var(--panel); border-bottom:1px solid var(--line); }
+.home-link { color:var(--text); font-weight:750; font-size:1.05rem; text-decoration:none; }
+.comic-picker-label { display:flex; align-items:center; gap:8px; color:var(--muted); }
+select,input,button { font:inherit; border:1px solid var(--line); border-radius:7px; padding:8px 10px; color:var(--text); background:#252c36; }
+button { cursor:pointer; min-width:112px; }
+button:disabled { opacity:.4; cursor:not-allowed; }
+.reader { /*width:min(1100px,100%);*/width: 100%; margin:0 auto; padding:20px 10px 36px; }
+.comic-heading { display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:16px; }
+h1 { font-size:clamp(1.15rem,3vw,1.7rem); margin:0; }
+#comicMeta { color:var(--muted); margin:4px 0 0; font-size:.9rem; }
+.small-link { color:var(--accent); white-space:nowrap; }
+.image-frame { width: 100%; min-height: 180px; display: flex; justify-content: center; align-items: flex-start; padding: 0; background: #08090b; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; } #pageImage { display: block; width: 100%; max-width: 100%; height: auto; max-height: none; object-fit: contain; }
+#imageError { color:#ffb4ab; text-align:center; padding:24px; }
+.controls { display:flex; align-items:center; justify-content:center; gap:18px; padding:16px 0 10px; }
+#pageCounter { min-width:115px; text-align:center; color:var(--muted); }
+.page-jump { display:flex; align-items:center; justify-content:center; gap:8px; color:var(--muted); }
+.page-jump input { width:86px; }
+.empty-state { margin:12px 0; padding:16px; border:1px solid #775b23; border-radius:8px; background:#302719; }
+@media(max-width:600px) { .topbar { align-items:flex-start; flex-direction:column; } .comic-picker-label { width:100%; justify-content:space-between; } .comic-picker-label select { flex:1; min-width:0; } .comic-heading { align-items:flex-start; flex-direction:column; } .controls { gap:8px; } button { min-width:0; } }
